@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+    background-color: #FFFFFF ;
+    font-family: 'Open Sans', 'Helvetica Neue', ;
+}
+
+body {
+    position: relative;
+width: 1440px;
+height: 891px;
+}
+
+h1 {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px 166px;
+
+position: absolute;
+width: 1440px;
+height: 30px;
+left: 0px;
+top: 0px;
+
+background: #7749F8;
+
+font-weight: 700;
+font-size: 23px;
+line-height: 28px;
+
+color: #FFFFFF;
+
+}
+
+header {
+    position: absolute;
+width: 642px;
+height: 48px;
+left: 399px;
+top: 312px;
+
+font-weight: 600;
+font-size: 40px;
+line-height: 48px;
+display: flex;
+align-items: center;
+
+color: #152536;
+}
+
+p {
+    position: absolute;
+width: 505px;
+height: 72px;
+left: 467px;
+top: 374px;
+
+font-weight: 400;
+font-size: 21px;
+line-height: 36px;
+
+display: flex;
+align-items: center;
+
+
+color: #152536;
+}
+
+
