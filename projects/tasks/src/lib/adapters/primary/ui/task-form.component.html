@@ -1,4 +1,8 @@
+
 <form [formGroup]="task">
-    <input type="text" formControlName="task" placeholder="Task">
-    <input type="submit" value="Submit">
+    <div class="mb-3">
+        <input type="text" class="form-control" id="inputTask" placeholder="Write your message here">
+    </div>
+    <button type="submit" class="button">Add task</button> 
+    <button type="submit" class="button" style="margin-left: 16px;">Cancel</button>
 </form>

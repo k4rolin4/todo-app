@@ -11,7 +11,7 @@ width: 1440px;
 height: 891px;
 }
 
-h1 {
+nav {
     display: flex;
 flex-direction: column;
 align-items: flex-start;
@@ -67,4 +67,18 @@ align-items: center;
 color: #152536;
 }
 
+.form-control {
+    position: relative;
+width: 420px;
+height: 120px;
+left: 164px;
+margin-top: 65px;
+}
+
+.button {
+    position: relative;
+left: 164px;
+margin-top: 20px;
+
+}
 
