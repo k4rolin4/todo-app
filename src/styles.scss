@@ -11,22 +11,20 @@ width: 1440px;
 height: 891px;
 }
 
-nav {
+.mynavbar {
     display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 16px 166px;
 
-position: absolute;
 width: 1440px;
-height: 30px;
-left: 0px;
-top: 0px;
+height: 60px;
 
 background: #7749F8;
 
-font-weight: 700;
-font-size: 23px;
+
+font-weight: 600;
+font-size: 26px;
 line-height: 28px;
 
 color: #FFFFFF;
@@ -75,10 +73,33 @@ left: 164px;
 margin-top: 65px;
 }
 
-.button {
+.mybutton {
     position: relative;
 left: 164px;
 margin-top: 20px;
+
+border-radius: 5px;
+border-color: #7749F8;
+background-color: #7749F8;
+border-style: hidden;
+
+
+width: 100px;
+height: 40px;
+
+
+color: white;
+&:visited{
+    color:white;
+&:hover{
+    color:white;
+    font-weight:bold;
+}
+}
+&:hover{
+    color: white;
+    font-weight:bold;
+}
 
 }
 
