@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { TasksPage } from './tasks.page';
-import { TaskFormComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/task-form.component-module';
+import { TestPage } from './test.page';
 import { TaskListComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/task-list.component-module';
 import { FirebaseTasksServiceModule } from '../../../projects/tasks/src/lib/adapters/secondary/infrastructure/firebase-tasks.service-module';
 
@@ -10,15 +9,14 @@ import { FirebaseTasksServiceModule } from '../../../projects/tasks/src/lib/adap
       RouterModule.forChild([
         {
           path: '',
-          component: TasksPage,
+          component: TestPage,
         }
       ]),
-  TaskFormComponentModule,
   TaskListComponentModule,
-  FirebaseTasksServiceModule
+  FirebaseTasksServiceModule,
 ],
-  	declarations: [TasksPage],
+  	declarations: [TestPage],
   	providers: [],
   	exports: [] })
-export class TasksPageModule {
+export class TestPageModule {
 }

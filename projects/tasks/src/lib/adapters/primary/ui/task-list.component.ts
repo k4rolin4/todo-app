@@ -1,10 +1,7 @@
-import { 
-    Component, 
-    ViewEncapsulation, 
-    ChangeDetectionStrategy 
-} from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { TaskDTO } from '../../../application/ports/secondary/task.dto';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject } from '@angular/core';
+import { GETS_ALL_TASK_DTO, GetsAllTaskDtoPort } from '../../../application/ports/secondary/gets-all-task.dto-port';
 
 @Component({ 
     selector: 'lib-task-list', 
@@ -13,11 +10,10 @@ import { TaskDTO } from '../../../application/ports/secondary/task.dto';
     changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class TaskListComponent {
-    task$: Observable<TaskDTO[]> = of([
-        {
-            id: '1',
-            text: 'cokolwiek',
-            done: true
-        }
-    ])
+  tasks$: Observable<TaskDTO[]> = this._getsAllTaskDto.getAll();
+
+  constructor(
+      @Inject(GETS_ALL_TASK_DTO) 
+      private _getsAllTaskDto: GetsAllTaskDtoPort
+    ) {}
 }

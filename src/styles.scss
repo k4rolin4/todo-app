@@ -6,6 +6,7 @@ html {
 }
 
 body {
+    background-color: #FFFFFF;
     position: relative;
 width: 1440px;
 height: 891px;
@@ -71,6 +72,12 @@ width: 420px;
 height: 120px;
 left: 164px;
 margin-top: 65px;
+}
+
+.form-check {
+    position: relative;
+left: 164px;
+margin-top: 20px;
 }
 
 .mybutton {
