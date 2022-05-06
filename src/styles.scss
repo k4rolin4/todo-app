@@ -37,7 +37,7 @@ header {
 width: 642px;
 height: 48px;
 left: 399px;
-top: 312px;
+top: 252px;
 
 font-weight: 600;
 font-size: 40px;
@@ -48,12 +48,12 @@ align-items: center;
 color: #152536;
 }
 
-p {
+.ph {
     position: absolute;
 width: 505px;
 height: 72px;
 left: 467px;
-top: 374px;
+top: 314px;
 
 font-weight: 400;
 font-size: 21px;
@@ -107,6 +107,39 @@ color: white;
     color: white;
     font-weight:bold;
 }
-
 }
 
+.cancel-button {
+    position: relative;
+left: 164px;
+margin-top: 20px;
+
+border-radius: 5px;
+border-color: grey;
+background-color:#FFFFFF;
+border-style: dashed;
+
+
+width: 100px;
+height: 40px;
+
+
+color: grey;
+&:visited{
+    color:grey;
+&:hover{
+    color:grey;
+    font-weight:bold;
+}
+}
+&:hover{
+    color: grey;
+    font-weight:bold;
+}
+}
+
+.border-bottom {
+    border-bottom: #CED4DA;
+    width: 1110px;
+
+}

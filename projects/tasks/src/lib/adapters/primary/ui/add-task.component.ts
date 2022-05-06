@@ -15,6 +15,6 @@ export class AddTaskComponent {
     this._addsTaskDto.add({
       task: addTask.get('task')?.value
     });
-    this.addTask.reset
+    this.addTask.reset();
   }
 }
