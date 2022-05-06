@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TasksPage } from './tasks.page';
-import { TaskFormComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/task-form.component-module';
 import { TaskListComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/task-list.component-module';
 import { FirebaseTasksServiceModule } from '../../../projects/tasks/src/lib/adapters/secondary/infrastructure/firebase-tasks.service-module';
+import { AddTaskComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/add-task.component-module';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -13,9 +13,9 @@ import { FirebaseTasksServiceModule } from '../../../projects/tasks/src/lib/adap
           component: TasksPage,
         }
       ]),
-  TaskFormComponentModule,
   TaskListComponentModule,
-  FirebaseTasksServiceModule
+  FirebaseTasksServiceModule,
+  AddTaskComponentModule
 ],
   	declarations: [TasksPage],
   	providers: [],
