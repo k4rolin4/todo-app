@@ -80,6 +80,10 @@ left: 164px;
 margin-top: 20px;
 }
 
+input[type=checkbox]:checked {
+background-color: #7749F8;
+}
+
 .mybutton {
     position: relative;
 left: 164px;
@@ -143,3 +147,35 @@ color: grey;
     width: 1110px;
 
 }
+
+.mycontainer {
+    position: relative;
+margin-top: 20px;
+
+}
+
+.dropdown-btn {
+    position: relative;
+
+background-color: #FFFFFF;
+border-style:none;
+
+color: grey;
+&:visited{
+    color:grey;
+&:hover{
+    color:grey;
+    font-weight:bold;
+}
+}
+&:hover{
+    color: grey;
+    font-weight:bold;
+
+}
+
+
+}
+
+
+

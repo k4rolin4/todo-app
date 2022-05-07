@@ -1,7 +1,26 @@
 
-<div class="form-check" *ngFor="let task of tasks$ | async"> 
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
-    <label class="form-check-label" for="exampleRadios1">
-      {{task.task}}
-    </label>
+<div class="form-check" *ngFor="let task of tasks$ | async">
+<div class="mycontainer">
+  <div class="row">
+    <div class="col">
+    <input 
+      class="form-check-input" style="border-radius: 100%;" type="checkbox" id="" value="">
+  <label 
+      class="form-check-label" for=""> {{task.task}}
+  </label>
+    </div>
+    <div class="col">
+      <div class="dropdown">
+        <button 
+          class="dropdown-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown">...
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" role="menu">
+          <li>
+            <a class="dropdown-item">Delete</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
