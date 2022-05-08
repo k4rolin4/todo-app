@@ -6,6 +6,8 @@ import { TaskListComponentModule } from '../../../projects/tasks/src/lib/adapter
 import { FirebaseTasksServiceModule } from '../../../projects/tasks/src/lib/adapters/secondary/infrastructure/firebase-tasks.service-module';
 import { AddTaskComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/add-task.component-module';
 import { DateComponentModule } from '../../../projects/date/src/lib/adapters/primary/ui/date.component-module';
+import { ImageComponentModule } from '../../../projects/home/src/lib/adapters/primary/ui/image.component-module';
+import { FirebaseImageServiceModule } from '../../../projects/home/src/lib/adapters/secondary/infrastructure/firebase-image.service-module';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -17,7 +19,9 @@ import { DateComponentModule } from '../../../projects/date/src/lib/adapters/pri
   TaskListComponentModule,
   FirebaseTasksServiceModule,
   AddTaskComponentModule,
-  DateComponentModule
+  DateComponentModule,
+  ImageComponentModule,
+  FirebaseImageServiceModule
 ],
   	declarations: [TestPage],
   	providers: [],

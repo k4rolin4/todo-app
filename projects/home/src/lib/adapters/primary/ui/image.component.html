@@ -1,0 +1,10 @@
+
+<div class="container">
+    <div class="row" style="margin-top: 60px;">
+      <div class="col-4" *ngFor="let image of images$ | async">
+          <div class="card text-center">
+              <img [src]="image.imageUrl" class="card-img-top">
+          </div>
+      </div>
+    </div>
+</div>
