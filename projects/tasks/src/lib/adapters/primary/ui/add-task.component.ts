@@ -19,8 +19,14 @@ export class AddTaskComponent {
   }
 
   onAddTaskSubmited(addTask: FormGroup): void {
+    if(addTask.invalid) {
+      return;
+    }
+    
     this._addsTaskDto.add({
-      task: addTask.get('task')?.value
+      task: addTask.get('task')?.value,
+      done: false,
+      created: Date.now(),
     });
     this.addTask.reset();
   }

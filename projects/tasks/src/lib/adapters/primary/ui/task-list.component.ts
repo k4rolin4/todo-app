@@ -1,4 +1,4 @@
-import { Observable, of, tap } from 'rxjs';
+import { map, Observable, of, tap } from 'rxjs';
 import { TaskDTO } from '../../../application/ports/secondary/task.dto';
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject, TemplateRef } from '@angular/core';
 import { GETS_ALL_TASK_DTO, GetsAllTaskDtoPort } from '../../../application/ports/secondary/gets-all-task.dto-port';
@@ -13,7 +13,9 @@ import { REMOVES_TASK_DTO, RemovesTaskDtoPort } from '../../../application/ports
 })
 export class TaskListComponent {
   tasks$: Observable<TaskDTO[]> = this._getsAllTaskDto.getAll()
-    .pipe(tap(console.log));
+    .pipe(map((task: TaskDTO[]) =>
+    task.sort((a, b) => a.created - b.created))
+  );
 
   constructor(
       @Inject(GETS_ALL_TASK_DTO) 
