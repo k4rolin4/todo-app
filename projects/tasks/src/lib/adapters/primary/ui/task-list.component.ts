@@ -28,8 +28,9 @@ export class TaskListComponent {
     } else {
       this._setsTaskDto.set({
         id: setTask.id,
-        done: true,
+        done: false,
       })
     }
   }
+
 }
