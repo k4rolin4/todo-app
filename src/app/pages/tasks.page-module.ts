@@ -15,7 +15,7 @@ import { AddTaskComponentModule } from '../../../projects/tasks/src/lib/adapters
       ]),
   TaskListComponentModule,
   FirebaseTasksServiceModule,
-  AddTaskComponentModule
+  AddTaskComponentModule,
 ],
   	declarations: [TasksPage],
   	providers: [],

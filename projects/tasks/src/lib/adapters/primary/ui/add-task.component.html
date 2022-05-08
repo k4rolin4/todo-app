@@ -1,7 +1,7 @@
 
     <form [formGroup]="addTask" (ngSubmit)="onAddTaskSubmited(addTask)">
         <div class="mb-3">
-            <input type="text" class="form-control" formControlName="task" placeholder="Write your next task here">
+            <textarea class="form-control" formControlName="task" aria-label="With textarea" placeholder="Write your next task here"></textarea>
         </div>
         <button type="submit" class="mybutton" value="Submit">
             Add task

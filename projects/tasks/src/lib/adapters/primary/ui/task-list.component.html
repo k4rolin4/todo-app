@@ -3,24 +3,32 @@
 <div class="mycontainer">
   <div class="row">
     <div class="col">
-    <input 
-      class="form-check-input" style="border-radius: 100%;" type="checkbox" id="" value="">
-  <label 
-      class="form-check-label" for=""> {{task.task}}
-  </label>
+    <input class="form-check-input" style="border-radius: 100%;" type="checkbox" id=""
+    [ngClass]="{ 'input:checked': task.done === true }"
+    (click)="onItemClicked(task)"
+    [checked]="task.done">
+    <label class="form-check-label" for="">
+      <p class="d-inline" [ngClass]="{'text-decoration-line-through': task.done === true}">
+        {{task.task}}
+      </p>
+    </label>
     </div>
-    <div class="col">
+
+    <div class="col" style="text-align:center;">
       <div class="dropdown">
         <button 
-          class="dropdown-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown">...
+          class="dropdown-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+          ...
+          <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" role="menu">
-          <li>
+          <li role="menu-item">
             <a class="dropdown-item">Delete</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
+
 </div>
 </div>
