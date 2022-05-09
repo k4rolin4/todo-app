@@ -17,6 +17,8 @@ export class TaskListComponent {
     task.sort((a, b) => a.created - b.created))
   );
 
+  deleteTaskAlert = false;
+
   constructor(
       @Inject(GETS_ALL_TASK_DTO) 
       private _getsAllTaskDto: GetsAllTaskDtoPort, 
@@ -47,5 +49,8 @@ export class TaskListComponent {
     if(confirm("Are you sure to delete this task?")) {
       this._removesTaskDto.remove(taskId);
     } 
+  }
+  showDeleteTask() {
+    this.deleteTaskAlert = true;
   }
 }

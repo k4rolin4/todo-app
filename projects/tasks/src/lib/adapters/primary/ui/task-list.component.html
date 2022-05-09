@@ -18,7 +18,9 @@
       <div class="btn-group" dropdown>
         <button 
           class="dropdown-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          (click)="clickConfirm(task.id)"> 🗑
+          (click)="clickConfirm(task.id)"
+          (click)="showDeleteTask()"> 
+          🗑
           <span class="caret"></span>
         </button>
         <!--
@@ -34,3 +36,9 @@
 
 </div>
 </div>
+
+<div *ngIf="deleteTaskAlert" class="alert alert-success position-absolute top-0 end-0"role="alert">
+  task deleted!
+</div>
+
+
