@@ -40,5 +40,12 @@ export class TaskListComponent {
 
   removeTask(taskId: string): void {
     this._removesTaskDto.remove(taskId);
+
+  }
+
+  clickConfirm(taskId: string) {
+    if(confirm("Are you sure to delete this task?")) {
+      this._removesTaskDto.remove(taskId);
+    } 
   }
 }
