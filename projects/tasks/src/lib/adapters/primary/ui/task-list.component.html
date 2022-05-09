@@ -15,10 +15,10 @@
     </div>
 
     <div class="col" style="text-align:center;">
-      <div class="dropdown">
+      <div class="btn-group" dropdown>
         <button 
-          class="dropdown-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-          ...
+          class="dropdown-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          (click)="removeTask(task.id)"> 🗑
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" role="menu">
