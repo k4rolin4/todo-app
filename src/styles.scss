@@ -68,7 +68,7 @@ color: #152536;
 
 .form-control {
     position: relative;
-width: 420px;
+max-width: 420px;
 height: 120px;
 left: 164px;
 margin-top: 65px;
@@ -186,3 +186,9 @@ color: grey;
 }
 
 
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

@@ -1,9 +1,11 @@
-import { map, Observable, of, tap } from 'rxjs';
+import { from, map, Observable, of, tap } from 'rxjs';
 import { TaskDTO } from '../../../application/ports/secondary/task.dto';
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject, TemplateRef } from '@angular/core';
 import { GETS_ALL_TASK_DTO, GetsAllTaskDtoPort } from '../../../application/ports/secondary/gets-all-task.dto-port';
 import { SETS_TASK_DTO, SetsTaskDtoPort } from '../../../application/ports/secondary/sets-task.dto-port';
 import { REMOVES_TASK_DTO, RemovesTaskDtoPort } from '../../../application/ports/secondary/removes-task.dto-port';
+
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({ 
     selector: 'lib-task-list', 
@@ -17,7 +19,16 @@ export class TaskListComponent {
     task.sort((a, b) => a.created - b.created))
   );
 
+  items$: string[] = [
+    'Delete',
+    'Edit',
+  
+  ];
+
   deleteTaskAlert = false;
+
+  modalRef?: BsModalRef;
+  modalService: any;
 
   constructor(
       @Inject(GETS_ALL_TASK_DTO) 
@@ -48,9 +59,14 @@ export class TaskListComponent {
   clickConfirm(taskId: string) {
     if(confirm("Are you sure to delete this task?")) {
       this._removesTaskDto.remove(taskId);
-    } 
+    } else {
+      return;
+    }
   }
+  
   showDeleteTask() {
     this.deleteTaskAlert = true;
   }
+
+
 }
